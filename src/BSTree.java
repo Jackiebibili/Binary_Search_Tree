@@ -42,14 +42,13 @@ public class BSTree<E extends Comparable<E>> {
       return new Node<E>(payload);
    }
 
-   public Node<E> insert(E payload) {
+   public void insert(E payload) {
       Node<E> newNode = createNewNode(payload);
       if (root == null) {
          root = newNode;
       } else {
          insert(newNode, root, null);
       }
-      return newNode;
    }
 
    protected void insert(Node<E> newNode, Node<E> node, Node<E> parent) {
