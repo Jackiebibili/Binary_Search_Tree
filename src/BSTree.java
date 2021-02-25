@@ -17,9 +17,9 @@ public class BSTree<E extends Comparable<E>> {
       while (cur != null) {
          list.add(cur);
          if (cur.compareTo(find) < 0) {
-            cur = cur.getLeft();
-         } else {
             cur = cur.getRight();
+         } else {
+            cur = cur.getLeft();
          }
       }
       return list;
